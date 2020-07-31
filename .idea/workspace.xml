@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdf74b8c-0c36-4f47-999d-94b034a5b3b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/NavigationExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Extension/RouteExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Extension/SecurityExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NavigationBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Resources/config/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Resources/views/navigation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ConfigTranslationExtractor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templating/Twig/NavigationExtension.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fRvA3RRGuwHAEIvCqBrINZzSlk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdf74b8c-0c36-4f47-999d-94b034a5b3b6" name="Default Changelist" comment="" />
+      <created>1596193572403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596193572403</updated>
+      <workItem from="1596193574857" duration="15000" />
+      <workItem from="1596193905904" duration="481000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
