@@ -56,8 +56,5 @@
   "support": {
     "issues": "https://github.com/iterica/navigation-bundle/issues",
     "source": "https://github.com/iterica/navigation-bundle"
-  },
-  "repositories": [
-    { "type": "vcs", "url": "https://github.com/iterica/navigation-core" }
-  ]
+  }
 }
