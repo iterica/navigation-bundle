@@ -2,19 +2,18 @@
 namespace Iterica\NavigationBundle\DependencyInjection;
 
 use Iterica\Navigation\Navigation;
+use Iterica\NavigationBundle\Extension\RouteExtension;
 use Iterica\NavigationBundle\Extension\SecurityExtension;
 use Iterica\NavigationBundle\Extension\TranslationExtension;
-use Symfony\Bridge\Twig\Extension\RoutingExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Role\RoleHierarchyInterface;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 final class NavigationExtension extends Extension
 {
@@ -32,11 +31,11 @@ final class NavigationExtension extends Extension
         $container->getDefinition(Navigation::class)->addMethodCall('configureScopes', [$config['scope']]);
 
         if ($config['extensions']['routing'] === true) {
-            $this->addRoutingExtension();
+            $this->addRoutingExtension($container);
         }
 
         if ($config['extensions']['security'] === true){
-            $this->addSecurityExtension();
+            $this->addSecurityExtension($container);
         }
     }
 
@@ -44,10 +43,8 @@ final class NavigationExtension extends Extension
      * @param ContainerBuilder $container
      */
     private function addRoutingExtension(ContainerBuilder $container){
-        $container->getDefinition(RoutingExtension::class)
-            ->setArguments([
-                $container->getDefinition(UrlGeneratorInterface::class),
-            ])
+        $container->getDefinition(RouteExtension::class)
+            ->setAutowired(true)
             ->addTag('navigation.extension');
     }
 
@@ -55,12 +52,9 @@ final class NavigationExtension extends Extension
      * @param ContainerBuilder $container
      */
     private function addSecurityExtension(ContainerBuilder $container){
+        $container->
         $container->getDefinition(SecurityExtension::class)
-            ->setArguments([
-                $container->getDefinition(TokenStorageInterface::class),
-                $container->getDefinition(AuthorizationCheckerInterface::class),
-                $container->getDefinition(RoleHierarchyInterface::class),
-            ])
+            ->setAutowired(true)
             ->addTag('navigation.extension');
     }
 }
