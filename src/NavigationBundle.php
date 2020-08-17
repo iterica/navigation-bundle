@@ -1,5 +1,4 @@
 <?php
-
 namespace Iterica\NavigationBundle;
 
 use Iterica\Navigation\Extension\NavigationExtensionInterface;
