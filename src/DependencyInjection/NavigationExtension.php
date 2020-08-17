@@ -52,7 +52,6 @@ final class NavigationExtension extends Extension
      * @param ContainerBuilder $container
      */
     private function addSecurityExtension(ContainerBuilder $container){
-        $container->
         $container->getDefinition(SecurityExtension::class)
             ->setAutowired(true)
             ->addTag('navigation.extension');

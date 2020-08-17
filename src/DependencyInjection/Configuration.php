@@ -16,6 +16,7 @@ final class Configuration implements ConfigurationInterface
                     ->booleanPrototype('security')->defaultTrue()->end()
                 ->end()
                 ->arrayNode('scope')
+                    ->useAttributeAsKey('')
                     ->variablePrototype()
                     ->end()
                 ->end()
