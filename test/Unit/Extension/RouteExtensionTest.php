@@ -29,7 +29,7 @@ final class RouteExtensionTest extends Framework\TestCase
         $node = new Node('main', [
             'label' => 'bla',
             'route' => 'index'
-        ], function (OptionsResolver $resolver) use ($routingExtension) {
+        ], function (OptionsResolver $resolver) use ($routingExtension): void {
             $routingExtension->configureOptions($resolver);
         });
 
