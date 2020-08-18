@@ -33,21 +33,19 @@ class SecurityExtension extends AbstractNavigationExtension
     {
         $expressionLanguage->registerProvider(new ExpressionLanguageProvider());
 
-        $expressionLanguage->register('is_granted', static function ($attributes, $object = 'null') {
+        $expressionLanguage->register('is_granted', static function ($attributes, $object = 'null'): string {
             return sprintf('$token && $auth_checker->isGranted(%s, %s)', $attributes, $object);
-        }, static function (array $variables, $attributes, $object = null) {
+        }, static function (array $variables, $attributes, $object = null): bool {
             return $variables['token'] && $variables['auth_checker']->isGranted($attributes, $object);
         });
     }
 
     public function getExpressionContext(): array
     {
-        if (($token = $this->tokenStorage->getToken())) {
-            $roleNames = $token->getRoleNames();
+        $token = $this->tokenStorage->getToken();
 
-            if (null !== $this->roleHierarchy) {
-                $roleNames = $this->roleHierarchy->getReachableRoleNames($roleNames);
-            }
+        if ($token !== null) {
+            $roleNames = $this->roleHierarchy->getReachableRoleNames($token->getRoleNames());
 
             return [
                 'token' => $token,

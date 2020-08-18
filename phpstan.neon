@@ -9,3 +9,5 @@ parameters:
 		- src/
 		- test/
 	tmpDir: .build/phpstan/
+	excludes_analyse:
+		- src/DependencyInjection/Configuration.php

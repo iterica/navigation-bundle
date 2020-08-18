@@ -50,12 +50,11 @@ class NavigationExtension extends AbstractExtension
     }
 
     /**
-     * @param $scope
-     *
+     * @param string $scope
      * @return ScopeNode
      * @throws Exception
      */
-    public function getScope($scope): ScopeNode
+    public function getScope(string $scope): ScopeNode
     {
         return $this->navigation->getScope($scope);
     }

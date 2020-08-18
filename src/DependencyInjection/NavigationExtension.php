@@ -20,7 +20,7 @@ final class NavigationExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
@@ -42,7 +42,7 @@ final class NavigationExtension extends Extension
     /**
      * @param ContainerBuilder $container
      */
-    private function addRoutingExtension(ContainerBuilder $container)
+    private function addRoutingExtension(ContainerBuilder $container): void
     {
         $container->getDefinition(RouteExtension::class)
             ->setAutowired(true)
@@ -52,7 +52,7 @@ final class NavigationExtension extends Extension
     /**
      * @param ContainerBuilder $container
      */
-    private function addSecurityExtension(ContainerBuilder $container)
+    private function addSecurityExtension(ContainerBuilder $container): void
     {
         $container->getDefinition(SecurityExtension::class)
             ->setAutowired(true)
