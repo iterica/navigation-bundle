@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Iterica\NavigationBundle\Test\Unit;
 
+use Iterica\NavigationBundle\Extension\RouteExtension;
 use PHPUnit\Framework;
 
 /**
