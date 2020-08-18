@@ -15,6 +15,7 @@ class RouteExtension extends AbstractNavigationExtension
      * @var RouterInterface
      */
     private RouterInterface $router;
+
     /**
      * @var RequestStack
      */
@@ -56,5 +57,4 @@ class RouteExtension extends AbstractNavigationExtension
             }
         }
     }
-
 }
