@@ -86,7 +86,7 @@ jobs:
 
       - name: "Run friendsofphp/php-cs-fixer"
         run: "vendor/bin/php-cs-fixer fix src/ --rules=@PSR2 --diff --diff-format=udiff --dry-run --verbose"
-        
+
   static-code-analysis:
     name: "Static Code Analysis"
 
@@ -337,7 +337,6 @@ jobs:
     needs:
       - "code-coverage"
       - "coding-standards"
-      - "dependency-analysis"
       - "mutation-tests"
       - "static-code-analysis"
       - "tests"
