@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e3cea7ce6b4d3376074792d535d2e44",
+    "content-hash": "6f79b2a33af95e7a88caae2412577f2a",
     "packages": [
         {
             "name": "iterica/navigation-core",
-            "version": "dev-master",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iterica/navigation-core.git",
@@ -6929,9 +6929,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "iterica/navigation-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
