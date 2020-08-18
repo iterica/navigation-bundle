@@ -29,9 +29,8 @@ class RouteExtension extends AbstractNavigationExtension
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver
-            ->define('route')
-            ->allowedTypes('null', 'string', 'array');
+        $resolver->setDefault('route', null);
+        $resolver->setAllowedTypes('route', ['null', 'string', 'array']);
     }
 
     public function processNode(Node $node): void
