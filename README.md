@@ -1,9 +1,9 @@
 # php-library-template
 
-[![Integrate](https://github.com/iterica/navigation-bundle/workflows/Integrate/badge.svg?branch=main)](https://github.com/iterica/navigation-bundle/actions)
-[![Prune](https://github.com/iterica/navigation-bundle/workflows/Prune/badge.svg?branch=main)](https://github.com/iterica/navigation-bundle/actions)
-[![Release](https://github.com/iterica/navigation-bundle/workflows/Release/badge.svg?branch=main)](https://github.com/iterica/navigation-bundle/actions)
-[![Renew](https://github.com/iterica/navigation-bundle/workflows/Renew/badge.svg?branch=main)](https://github.com/iterica/navigation-bundle/actions)
+[![Integrate](https://github.com/iterica/navigation-bundle/workflows/Integrate/badge.svg?branch=master)](https://github.com/iterica/navigation-bundle/actions)
+[![Prune](https://github.com/iterica/navigation-bundle/workflows/Prune/badge.svg?branch=master)](https://github.com/iterica/navigation-bundle/actions)
+[![Release](https://github.com/iterica/navigation-bundle/workflows/Release/badge.svg?branch=master)](https://github.com/iterica/navigation-bundle/actions)
+[![Renew](https://github.com/iterica/navigation-bundle/workflows/Renew/badge.svg?branch=master)](https://github.com/iterica/navigation-bundle/actions)
 
 [![Code Coverage](https://codecov.io/gh/iterica/navigation-bundle/branch/main/graph/badge.svg)](https://codecov.io/gh/iterica/navigation-bundle)
 [![Type Coverage](https://shepherd.dev/github/iterica/navigation-bundle/coverage.svg)](https://shepherd.dev/github/iterica/navigation-bundle)
