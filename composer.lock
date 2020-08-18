@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f79b2a33af95e7a88caae2412577f2a",
+    "content-hash": "717de7d01c0547f8cda8f366c0964315",
     "packages": [
         {
             "name": "iterica/navigation-core",
