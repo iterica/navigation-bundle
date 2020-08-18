@@ -11,7 +11,8 @@ use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class NavigationExtension extends AbstractExtension {
+class NavigationExtension extends AbstractExtension
+{
     /** @var Navigation $navigation */
     protected $navigation;
 
@@ -49,12 +50,11 @@ class NavigationExtension extends AbstractExtension {
     }
 
     /**
-     * @param $scope
-     *
+     * @param string $scope
      * @return ScopeNode
      * @throws Exception
      */
-    public function getScope($scope): ScopeNode
+    public function getScope(string $scope): ScopeNode
     {
         return $this->navigation->getScope($scope);
     }
@@ -69,7 +69,8 @@ class NavigationExtension extends AbstractExtension {
         $scopeNode = $this->navigation->getScope($scope);
 
         return $this->twig->render(
-            $template ?? $this->navigationTemplate, ['navigation' => $this->navigation, 'scope' => $scopeNode]
+            $template ?? $this->navigationTemplate,
+            ['navigation' => $this->navigation, 'scope' => $scopeNode]
         );
     }
 
@@ -83,7 +84,8 @@ class NavigationExtension extends AbstractExtension {
         $scopeNode = $this->navigation->getScope($scope);
 
         return $this->twig->render(
-            $template ?? $this->breadcrumbsTemplate, ['navigation' => $this->navigation, 'scope' => $scopeNode]
+            $template ?? $this->breadcrumbsTemplate,
+            ['navigation' => $this->navigation, 'scope' => $scopeNode]
         );
     }
 
@@ -97,7 +99,8 @@ class NavigationExtension extends AbstractExtension {
         $scopeNode = $this->navigation->getScope($scope);
 
         return $this->twig->render(
-            $template ?? $this->inlinenodesTemplate, ['navigation' => $this->navigation, 'scope' => $scopeNode]
+            $template ?? $this->inlinenodesTemplate,
+            ['navigation' => $this->navigation, 'scope' => $scopeNode]
         );
     }
 }

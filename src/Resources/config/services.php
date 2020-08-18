@@ -18,7 +18,7 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Environment;
 
-return static function (ContainerConfigurator $container) {
+return static function (ContainerConfigurator $container): void {
     $container->services()
         ->instanceof(NavigationExtensionInterface::class)
             ->tag('navigation.extension');
@@ -30,7 +30,7 @@ return static function (ContainerConfigurator $container) {
                 service(TranslatorInterface::class),
             ])
             ->call('setExtensions', [tagged_iterator('navigation.extension')])
-            ->public(true);
+            ->public();
 
     $container->services()
         ->set(NavigationExtension::class)

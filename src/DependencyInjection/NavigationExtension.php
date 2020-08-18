@@ -20,13 +20,13 @@ final class NavigationExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-        $loader->load('services.php');;
+        $loader->load('services.php');
 
         $container->getDefinition(Navigation::class)->addMethodCall('configureScopes', [$config['scope']]);
 
@@ -34,7 +34,7 @@ final class NavigationExtension extends Extension
             $this->addRoutingExtension($container);
         }
 
-        if ($config['extensions']['security'] === true){
+        if ($config['extensions']['security'] === true) {
             $this->addSecurityExtension($container);
         }
     }
@@ -42,7 +42,8 @@ final class NavigationExtension extends Extension
     /**
      * @param ContainerBuilder $container
      */
-    private function addRoutingExtension(ContainerBuilder $container){
+    private function addRoutingExtension(ContainerBuilder $container): void
+    {
         $container->getDefinition(RouteExtension::class)
             ->setAutowired(true)
             ->addTag('navigation.extension');
@@ -51,7 +52,8 @@ final class NavigationExtension extends Extension
     /**
      * @param ContainerBuilder $container
      */
-    private function addSecurityExtension(ContainerBuilder $container){
+    private function addSecurityExtension(ContainerBuilder $container): void
+    {
         $container->getDefinition(SecurityExtension::class)
             ->setAutowired(true)
             ->addTag('navigation.extension');

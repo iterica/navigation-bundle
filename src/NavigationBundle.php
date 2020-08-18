@@ -10,7 +10,7 @@ class NavigationBundle extends Bundle
     /**
      * @inheritDoc
      */
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         $container
             ->registerForAutoconfiguration(NavigationExtensionInterface::class)

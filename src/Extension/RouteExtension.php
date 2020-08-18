@@ -15,6 +15,7 @@ class RouteExtension extends AbstractNavigationExtension
      * @var RouterInterface
      */
     private RouterInterface $router;
+
     /**
      * @var RequestStack
      */
@@ -28,16 +29,16 @@ class RouteExtension extends AbstractNavigationExtension
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver
-            ->define('route')
-            ->allowedTypes('null', 'string', 'array');
+        $resolver->setDefault('route', null);
+        $resolver->setAllowedTypes('route', ['null', 'string', 'array']);
     }
 
     public function processNode(Node $node): void
     {
         $params = [];
+        $route = $node->getOption('route');
 
-        if (($route = $node->getOption('route'))) {
+        if ($route !== null) {
             if (is_array($route)) {
                 $params = array_merge($route[1], $params);
                 $route = $route[0];
@@ -46,7 +47,9 @@ class RouteExtension extends AbstractNavigationExtension
             try {
                 $node->setUrl($this->router->generate($route, $params));
 
-                if (($request = $this->requestStack->getCurrentRequest())) {
+                $request = $this->requestStack->getCurrentRequest();
+
+                if ($request !== null) {
                     if ($route === $request->attributes->get('_route')) {
                         $node->setActive(true);
                     }
@@ -56,5 +59,4 @@ class RouteExtension extends AbstractNavigationExtension
             }
         }
     }
-
 }
