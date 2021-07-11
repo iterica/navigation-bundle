@@ -12,7 +12,7 @@
   ],
   "require": {
     "php": "^7.4|^8.0",
-    "iterica/navigation-core": "^0.1",
+    "iterica/navigation-core": "^0.2",
     "symfony/config": "~4.0 || ^5.0",
     "symfony/dependency-injection": "~4.0 || ^5.0",
     "symfony/expression-language": "~4.0 || ^5.0",
@@ -24,7 +24,7 @@
     "ergebnis/license": "^1.1.0",
     "ergebnis/test-util": "^1.1.0",
     "friendsofphp/php-cs-fixer": "~2.16.4",
-    "infection/infection": "~0.17.3",
+    "infection/infection": "~0.21.5",
     "jangregor/phpstan-prophecy": "~0.8.0",
     "phpstan/extension-installer": "^1.0.5",
     "phpstan/phpstan": "~0.12.40",
