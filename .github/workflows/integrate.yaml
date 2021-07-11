@@ -343,7 +343,7 @@ jobs:
 
     steps:
       - name: "Request review from @iterica-bot"
-        uses: "actions/github-script@v3"
+        uses: "actions/github-script@v4.0.2"
         with:
           github-token: "${{ secrets.ITERICA_BOT_TOKEN }}"
           script: |
@@ -362,7 +362,7 @@ jobs:
             })
 
       - name: "Assign @iterica-bot"
-        uses: "actions/github-script@v3"
+        uses: "actions/github-script@v4.0.2"
         with:
           github-token: "${{ secrets.ITERICA_BOT_TOKEN }}"
           script: |
@@ -381,7 +381,7 @@ jobs:
             })
 
       - name: "Approve pull request"
-        uses: "actions/github-script@v3"
+        uses: "actions/github-script@v4.0.2"
         if: "github.actor != 'iterica-bot'"
         with:
           github-token: "${{ secrets.ITERICA_BOT_TOKEN }}"
@@ -397,7 +397,7 @@ jobs:
             })
 
       - name: "Merge pull request"
-        uses: "actions/github-script@v3"
+        uses: "actions/github-script@v4.0.2"
         with:
           github-token: "${{ secrets.ITERICA_BOT_TOKEN }}"
           script: |
