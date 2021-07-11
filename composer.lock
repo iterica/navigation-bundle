@@ -4,43 +4,43 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ee931feab1d6c7e4b386798ea849d9d",
+    "content-hash": "7dfcae19a3635cf031b866d9225b64b9",
     "packages": [
         {
             "name": "iterica/navigation-core",
-            "version": "v0.1",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iterica/navigation-core.git",
-                "reference": "9734981d5ad4356a374494882abbde32e3cd426b"
+                "reference": "dff4422e17a761d9e9e947de9b8d485382baf42c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iterica/navigation-core/zipball/9734981d5ad4356a374494882abbde32e3cd426b",
-                "reference": "9734981d5ad4356a374494882abbde32e3cd426b",
+                "url": "https://api.github.com/repos/iterica/navigation-core/zipball/dff4422e17a761d9e9e947de9b8d485382baf42c",
+                "reference": "dff4422e17a761d9e9e947de9b8d485382baf42c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4",
+                "php": "^7.4|^8.0",
                 "psr/event-dispatcher": "^1.0",
                 "symfony/event-dispatcher-contracts": "^2.1",
                 "symfony/expression-language": "^5.1",
-                "symfony/options-resolver": "^4.0 || ^5.0",
+                "symfony/options-resolver": "^5.1.5",
                 "symfony/property-access": "^5.1"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.7.1",
-                "ergebnis/license": "^1.0.0",
-                "ergebnis/test-util": "^1.0.0",
+                "ergebnis/composer-normalize": "^2.8.2",
+                "ergebnis/license": "^1.1.0",
+                "ergebnis/test-util": "^1.1.0",
                 "friendsofphp/php-cs-fixer": "~2.16.4",
-                "infection/infection": "~0.16.5",
+                "infection/infection": "~0.17.3",
                 "jangregor/phpstan-prophecy": "~0.8.0",
-                "phpstan/extension-installer": "^1.0.4",
-                "phpstan/phpstan": "~0.12.37",
+                "phpstan/extension-installer": "^1.0.5",
+                "phpstan/phpstan": "~0.12.40",
                 "phpstan/phpstan-deprecation-rules": "~0.12.5",
                 "phpstan/phpstan-phpunit": "~0.12.16",
-                "phpstan/phpstan-strict-rules": "~0.12.4",
-                "phpunit/phpunit": ">=9.2 <9.3"
+                "phpstan/phpstan-strict-rules": "~0.12.5",
+                "phpunit/phpunit": "^9.3.11"
             },
             "type": "library",
             "autoload": {
@@ -64,7 +64,7 @@
                 "issues": "https://github.com/iterica/navigation-core/issues",
                 "source": "https://github.com/iterica/navigation-core"
             },
-            "time": "2020-08-18T06:50:50+00:00"
+            "time": "2021-07-11T10:24:33+00:00"
         },
         {
             "name": "psr/cache",
