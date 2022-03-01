@@ -14,7 +14,7 @@
     "php": "^7.4|^8.0",
     "iterica/navigation-core": "^0.2",
     "symfony/config": "~4.0 || ^5.0",
-    "symfony/dependency-injection": "~4.0 || ^5.0",
+    "symfony/dependency-injection": "^5.4.5",
     "symfony/expression-language": "~4.0 || ^5.0",
     "symfony/http-foundation": "~4.0 || ^5.0",
     "symfony/http-kernel": "~4.0 || ^5.0"
